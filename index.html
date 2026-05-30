@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
+
+<!-- TikTok Pixel Code Start -->
+<script>
+!function (w, d, t) {
+  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+
+
+  ttq.load('D8DKLOJC77UFK9KDS5D0');
+  ttq.page();
+}(window, document, 'ttq');
+</script>
+<!-- TikTok Pixel Code End -->
+  
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="color-scheme" content="dark">
@@ -721,7 +736,7 @@ footer{margin-top:36px;text-align:center;padding:0 24px;}
 </div>
 
 <script>
-var OFFER_URL = "https://taprkr.com/r/eyJ0IjoidGVzdHN0YXIiLCJ0aWQiOiI4YmZhMzAyYzJkOWJkOThmY2NiMSIsInRzIjoxNzgwMTU0NjIwOTQ2fQ?feb=1";
+var OFFER_URL = "https://taprkr.com/r/eyJ0IjoidGVzdHN0YXIiLCJ0aWQiOiI4YmZhMzAyYzJkOWJkOThmY2NiMSIsInRzIjoxNzgwMTczODAyMDU3fQ?feb=1";
 
 var eligMsgs = [
   "Söker efter tillgängliga belöningsuppgifter…",
@@ -734,7 +749,7 @@ var eligMsgs = [
 function runEligScreen(onDone) {
   var bar = document.getElementById('eligBar');
   var msg = document.getElementById('eligMsg');
-  var totalDur = 3200;
+  var totalDur = 1800;
   var msgInterval = totalDur / eligMsgs.length;
   var idx = 0;
   var startTime = null;
@@ -789,7 +804,7 @@ function nextSlide(target) {
     var pcts = ['', '33%', '66%', '100%'];
     document.getElementById('progressFill').style.width = pcts[target];
     window.scrollTo({top: 0, behavior: 'smooth'});
-  }, 210);
+  }, 150);
 }
 
 function selectEarning(btn) {
@@ -802,10 +817,10 @@ function selectEarning(btn) {
     document.getElementById('stepIndicator').textContent = '3 / 3';
     var quizCard = document.getElementById('quizCard');
     var progressWrap = document.getElementById('progressWrap');
-    quizCard.style.transition = 'opacity 0.32s ease, transform 0.32s ease';
+    quizCard.style.transition = 'opacity 0.2s ease, transform 0.2s ease';
     quizCard.style.opacity = '0';
     quizCard.style.transform = 'translateY(-18px)';
-    progressWrap.style.transition = 'opacity 0.32s ease';
+    progressWrap.style.transition = 'opacity 0.2s ease';
     progressWrap.style.opacity = '0';
 
     setTimeout(function() {
@@ -819,17 +834,17 @@ function selectEarning(btn) {
       eligScreen.style.display = 'flex';
 
       runEligScreen(function() {
-        eligScreen.style.transition = 'opacity 0.45s ease';
+        eligScreen.style.transition = 'opacity 0.25s ease';
         eligScreen.style.opacity = '0';
         setTimeout(function() {
           eligScreen.style.display = 'none';
           eligScreen.style.visibility = 'hidden';
           document.getElementById('finalSection').classList.add('active');
           window.scrollTo({top: 0, behavior: 'smooth'});
-        }, 460);
+        }, 260);
       });
-    }, 330);
-  }, 500);
+    }, 200);
+  }, 250);
 }
 
 function handleCTA() {
@@ -843,11 +858,11 @@ function handleCTA() {
       redirMsg.textContent = 'Du omdirigeras till belöningsdashboarden…';
       redirMsg.style.opacity = '1';
     }, 200);
-  }, 700);
+  }, 400);
 
   setTimeout(function() {
     window.location.href = OFFER_URL;
-  }, 1500);
+  }, 900);
 }
 </script>
 
